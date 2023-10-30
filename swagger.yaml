@@ -5,10 +5,10 @@ info:
     deskripsi 
   termsOfService: https://github.com/jscroot/examples/tree/main/api/swagger
   contact:
-    email: raulmahya11@gmail.com
+    email: shintaraudita2110@gmail.com
   license:
-    name: Fancy BackEnd
-    url: https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
+    name: #Fancy BackEnd
+    url: #https://pkg.go.dev/github.com/Fancypedia/fancybackenddd
   version: 1.0.11
 externalDocs:
   description: Repo GCF
@@ -21,7 +21,7 @@ paths:
   /getallgis:
     post:
       tags:
-        - Get All Gis
+        - Get All GIS
       summary: Get Data Geospasial
       description: List Data Geospasial
       operationId: getGeoJSON
@@ -136,7 +136,7 @@ components:
       properties:
         username:
           type: string
-          example: "zz"
+          example: "zs"
   requestBodies:
     AuthReq:
       description: Request Authentication
