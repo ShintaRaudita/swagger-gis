@@ -66,20 +66,16 @@ components:
           properties:
             name:
               type: string
-              example: "LOCATIONN"
+              example: "Nama Locationn"
         geometry:
           type: object
-          coordinates:
-              type: array
-              items:
-                - type: array
-                  items:
-                    - [125.6, 10.1]
           properties:
+            coordinates:
+              type: array
+              example: [ [133.6, 114.1] ]
             type:
               type: string
               example: "Point"
-          
   securitySchemes:
     SECRET:
       type: apiKey
