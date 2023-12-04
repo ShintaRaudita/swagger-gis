@@ -111,18 +111,10 @@ components:
       properties:
         username:
           type: string
-          example: aulia
+          example: shinta
         password:
           type: string
-          example: aulia
-
-
-
-
-
-
-
-
+          example: shinta
 
   securitySchemes:
     SECRET:
