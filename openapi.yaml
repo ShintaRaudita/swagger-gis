@@ -16,19 +16,23 @@ externalDocs:
   url: https://pkg.go.dev/github.com/ShintaRaudita/BEgis
 servers:
   - url: https://asia-southeast2-northern-eon-401500.cloudfunctions.net
+
+# Judul
 tags:
   - name: Create GIS
     description: Data Geo Spasial
     externalDocs:
       description: Deskripsi dan Kode Program
       url: https://pkg.go.dev/github.com/ShintaRaudita/BEgis
-  - name: auth
-    description: Auth to Access to API
-    externalDocs:
-      description: Deskripsi dan Kode Program
-      url: https://pkg.go.dev/github.com/ShintaRaudita/BEgis
-  - name: user
+  # - name: auth
+  #   description: Auth to Access to API
+  #   externalDocs:
+  #     description: Deskripsi dan Kode Program
+  #     url: https://pkg.go.dev/github.com/ShintaRaudita/BEgis
+  - name: User
     description: Get Token and Authorize
+
+# buat dropdown
 paths:
   /authPoin:  # Penambahan endpoint Create GIS
     post:
@@ -52,7 +56,34 @@ paths:
         - SECRET:
             - write:apiKey
             - read:SECRET
-               
+
+  /CreateUser:
+      post:
+        tags:
+        - User
+        summary: Registrasi User
+        description: Membuat akun user dengan password terenkripsi
+        operationId: MembuatUser
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsernameNPassword'
+        responses:
+          '200':
+            description: successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/UsernameNPassword'
+        security:
+          - token:
+              - write:apiKey
+              - read:apiKey
+
+              
+
+# SCHEMAS/buat contoh template
 components:
   schemas:
     Peta:
@@ -76,6 +107,25 @@ components:
             type:
               type: string
               example: "Point"
+
+    UsernameNPassword:
+      type: object
+      properties:
+        username:
+          type: string
+          example: aulia
+        password:
+          type: string
+          example: aulia
+
+
+
+
+
+
+
+
+
   securitySchemes:
     SECRET:
       type: apiKey
