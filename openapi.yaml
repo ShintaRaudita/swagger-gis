@@ -81,8 +81,6 @@ paths:
               - write:apiKey
               - read:apiKey
 
-              
-
 # SCHEMAS/buat contoh template
 components:
   schemas:
@@ -97,7 +95,7 @@ components:
           properties:
             name:
               type: string
-              example: "Nama Locationn"
+              example: "Nama Locationnn"
         geometry:
           type: object
           properties:
